@@ -65,10 +65,9 @@ body {
 		line-height: 1.7em;
 	}
 
-	&:not(.mobile) {
-		& a:not(.not-hover):hover {
-			opacity: 0.7;
-		}
+	& a:not(.not-hover):hover {
+		opacity: 0.7;
+		color: inherit !important;
 	}
 
 	&::-webkit-scrollbar {
@@ -77,9 +76,8 @@ body {
 		margin-right: 4px;
 	}
 	&::-webkit-scrollbar-thumb {
-		background: #7ED321;
+		background: #7ed321;
 		border-radius: 10px;
-
 	}
 	&::-webkit-scrollbar-track {
 		background: transparent;
@@ -206,7 +204,6 @@ figure {
 
 .padding-wrap {
 	padding: 5rem 0;
-
 }
 
 .ibg {
@@ -425,7 +422,7 @@ figure {
 
 			&:before {
 				position: absolute;
-				content: '•';
+				content: "•";
 				left: 0;
 				top: 0;
 			}

@@ -14,7 +14,6 @@
             if(document.documentElement.clientWidth < 768) {
                 breykpoint = 100;
             }
-            console.log(bottom);
             if(bottom < -breykpoint) {
                 stickyBtn.classList.add('btn--hide');
                 wrapper.style.display = 'block';

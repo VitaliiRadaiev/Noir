@@ -73,7 +73,9 @@ defer
 	<header class="header " data-header data-popup="add-right-padding">
     <div class="container">
         <div class="header__logo">
-            <img src="img/logo/logo.svg" alt="">
+            <a href="index.html">
+                <img src="img/logo/logo.svg" alt="">
+            </a>
         </div>
     </div>
 </header>
@@ -100,7 +102,7 @@ defer
             щось насправді яскраве
         </h2>
         <div class="intro-text__btn">
-            <a href="#" class="btn not-hover" data-sticky-btn>Pre-order</a>
+            <a href="#order" class="btn not-hover" data-popup="open-popup" data-sticky-btn>Pre-order</a>
         </div>
         <div class="intro-text__text text-content wow fadeInUp" data-wow-duration="2s" >
             <p>
@@ -302,8 +304,8 @@ defer
 
 	<div class="popup" id="order">
     <div class="popup__close" data-popup="close-popup"><span></span></div>
-	<div class="popup__body">
-		<div class="popup__content container">
+    <div class="popup__body">
+        <div class="popup__content">
             <form action="/" class="">
                 <div class="order">
                     <h2 class="order__title">Please select a model and fill the form:</h2>
@@ -311,11 +313,11 @@ defer
                         <div class="swiper-wrapper">
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/oreder-img.png" alt="">
+                                    <img src="img/photo/order-img.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">eONE</div>
-                                    <div class="order__slider-text">
+                                    <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 317*105 см</li>
                                             <li>коннектор Type 1 plug або Mennekes Type 2 plug</li>
@@ -328,11 +330,11 @@ defer
                             </div>
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/oreder-img.png" alt="">
+                                    <img src="img/photo/order-img.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">iONE</div>
-                                    <div class="order__slider-text">
+                                    <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 317*105 см</li>
                                             <li>коннектор Type 1 plug або Mennekes Type 2 plug</li>
@@ -347,14 +349,16 @@ defer
                             </div>
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/oreder-img.png" alt="">
+                                    <img src="img/photo/order-img.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">eDUO</div>
-                                    <div class="order__slider-text">
+                                    <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 450*105 см</li>
-                                            <li>коннектори type 1 plug та mennekes Type 2 plug з можливістю одночасної роботи;  або 2 коннектори Type 1 plug з можливістю одночасної роботи; або 2 коннектори Mennekes Type 2 plug з можливістю одночасної роботи</li>
+                                            <li>коннектори type 1 plug та mennekes Type 2 plug з можливістю одночасної
+                                                роботи; або 2 коннектори Type 1 plug з можливістю одночасної роботи; або
+                                                2 коннектори Mennekes Type 2 plug з можливістю одночасної роботи</li>
                                             <li>максимальна сила струму 32 A для кожного коннектору</li>
                                             <li>максимальна потужність 7 кВт/год для Type 1 plug</li>
                                             <li>максимальна потужність 22 кВт/год для Mennekes Type 2 plug</li>
@@ -364,11 +368,11 @@ defer
                             </div>
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/oreder-img.png" alt="">
+                                    <img src="img/photo/order-img.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">iDUO</div>
-                                    <div class="order__slider-text">
+                                    <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 317*105 см</li>
                                             <li>коннектор Type 1 plug або mennekes Type 2 plug</li>
@@ -383,6 +387,12 @@ defer
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
+                        <div class="order__slider-radio-group">
+                            <input type="radio" name="product" checked>
+                            <input type="radio" name="product">
+                            <input type="radio" name="product">
+                            <input type="radio" name="product">
+                        </div>
                     </div>
                     <div class="order-form">
                         <div class="order-form__items">
@@ -412,17 +422,38 @@ defer
                             <label class="checkbox-radio">
                                 <input type="checkbox">
                                 <div class="checkbox-radio__square"></div>
-                                <div class="checkbox-radio__text"></div>
+                                <div class="checkbox-radio__text">Additionally, I’d like to stay informed about local
+                                    events</div>
                             </label>
                         </div>
 
-                        <div class="order-form__text"></div>
+                        <div class="order-form__text">
+                            By submitting this form, you agree to our <a href="#">Terms of Use and our Privacy
+                                Policy.</a>
+                        </div>
                         <button type="submit" class="order-form__submit btn">Confirm order</button>
                     </div>
                 </div>
             </form>
-		</div>
-	</div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="message">
+    <!-- use API  popup.open('#message')  popup.close('#message')-->
+    <div class="popup__close" data-popup="close-popup"><span></span></div>
+    <div class="popup__body">
+        <div class="popup__content">
+            <div class="message">
+                <h2 class="message__title">Thank you!</h2>
+                <div class="message__subtitle">
+                    Selected NOIR model <br>
+                    is on way to you!
+                </div>
+                <button class="btn" data-popup="close-popup">Close window</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -304,6 +304,7 @@ class App {
 
 		this.dynamicAdapt.init();
 		this.headerHandler();
+		this.componentsScripts();
 		this.popupHandler();
 		this.initSmoothScroll();
 		this.inputMaskInit();
@@ -312,7 +313,7 @@ class App {
 			document.body.classList.add('page-is-load');
 			this.utils.setFullScreenHeight();
 			this.slidersInit();
-			this.componentsScripts();
+			
 			this.scrollTgriggerAnimationInit();
 		});
 
@@ -500,32 +501,27 @@ window.popup = {
 
 	slidersInit() {
 		{
-    let carousels = document.querySelectorAll('[data-carousel]');
-    if(carousels.length) {
-        carousels.forEach(carousel => {
-            let carouselSwiper = new Swiper(carousel.querySelector('.swiper'), {
-                speed: 800,
-                navigation: {
-                    nextEl: carousel.querySelector('[data-action="btn-next"]'),
-                    prevEl: carousel.querySelector('[data-action="btn-prev"]'),
+    let orderSlider = document.querySelector('[data-order-slider]');
+    if(orderSlider) {
+        let radioItems = orderSlider.querySelectorAll('.order__slider-radio-group input[type="radio"]');
+
+        let sliderData = new Swiper(orderSlider, {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            pagination: {
+            	el: orderSlider.querySelector('.swiper-pagination'),
+            	clickable: true,
+            },
+            on: {
+                slideChange: function (e) {
+                    radioItems[e.activeIndex].checked = true;
                 },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 2,
-                        spaceBetween: 15,
-                        autoHeight: true,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    992: {
-                        slidesPerView: 4,
-                        spaceBetween: 25,
-                    },
-                },
-            });
-        })
+            }
+        });
     }
 };
 	}
@@ -988,7 +984,6 @@ window.popup = {
             if(document.documentElement.clientWidth < 768) {
                 breykpoint = 100;
             }
-            console.log(bottom);
             if(bottom < -breykpoint) {
                 stickyBtn.classList.add('btn--hide');
                 wrapper.style.display = 'block';

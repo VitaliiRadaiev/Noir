@@ -18,6 +18,7 @@ class App {
 
 		this.dynamicAdapt.init();
 		this.headerHandler();
+		this.componentsScripts();
 		this.popupHandler();
 		this.initSmoothScroll();
 		this.inputMaskInit();
@@ -26,7 +27,7 @@ class App {
 			document.body.classList.add('page-is-load');
 			this.utils.setFullScreenHeight();
 			this.slidersInit();
-			this.componentsScripts();
+			
 			this.scrollTgriggerAnimationInit();
 		});
 
@@ -41,7 +42,7 @@ class App {
 	}
 
 	slidersInit() {
-		@@include('../common/carousel/carousel.js');
+		@@include('../common/order/order.js');
 	}
 
 

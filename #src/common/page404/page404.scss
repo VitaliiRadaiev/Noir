@@ -1,0 +1,20 @@
+.page404 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    align-items: center;
+    justify-content: center;
+    &__title {
+        text-shadow: 0 0 3rem #2eff00;
+        color: #7ed321;
+        font-size: 13rem;
+        line-height: 1em;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+    }
+}
