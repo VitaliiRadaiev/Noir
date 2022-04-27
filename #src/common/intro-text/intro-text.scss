@@ -1,0 +1,64 @@
+.intro-text {
+    &__body {
+        
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 auto 5rem;
+        max-width: 12em;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 117.4rem;
+        margin: 0 auto 5rem;
+        height: 9.6rem;
+
+        & .btn {
+            width: 100%;
+
+            &--hide {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 113.4rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__img {
+        text-align: center;
+        margin-top: -10rem;
+        position: relative;
+        z-index: 1;
+        & img {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.sticky-btn-wrapper {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 117.4rem !important;
+    z-index: 47;
+    display: none;
+
+    & .btn {
+        width: 100%;
+    }
+}

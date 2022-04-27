@@ -1,0 +1,23 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 47;
+    padding-top: 10rem;
+    transition: all .4s ease;
+
+    &__logo {
+        width: 100%;
+        max-width: 16.4rem;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &--is-scroll {
+        padding-top: 4rem;
+    }
+}

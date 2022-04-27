@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "NOIR"
+})
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+
+	@@include('common/header/_header.html',{
+	"mod": ""
+	})
+	<!-- == // TOP LINE ================== -->
+
+	<main class="_page home-page">
+		@@include('common/promo-header/_promo-header.html')
+
+		@@include('common/intro-text/_intro-text.html')
+		
+		@@include('common/products/_products.html')
+		
+		@@include('common/banner/_banner.html')
+		
+		@@include('common/advantages/_advantages.html')
+
+		
+		<div class="full-width-img padding-wrap pb-0">
+			<img src="img/photo/full-width-img.jpg" alt="">
+		</div>
+
+	</main>
+
+	<!-- == FOOTER ================== -->
+	@@include('common/footer/_footer.html',{})
+	<!-- == // FOOTER ================== -->
+
+	@@include('_js-bottom.html',{})
+</body>
+
+</html>
