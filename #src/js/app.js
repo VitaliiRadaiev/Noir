@@ -27,6 +27,7 @@ class App {
 			this.utils.setFullScreenHeight();
 			this.slidersInit();
 			this.componentsScripts();
+			this.scrollTgriggerAnimationInit();
 		});
 
 	}
@@ -241,6 +242,16 @@ class App {
 				window.addEventListener('resize', setFontSize);
 			})
 		}
+	}
+
+	scrollTgriggerAnimationInit() {
+		let wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 7,
+		})
+
+		wow.init();
 	}
 
 

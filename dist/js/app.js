@@ -313,6 +313,7 @@ class App {
 			this.utils.setFullScreenHeight();
 			this.slidersInit();
 			this.componentsScripts();
+			this.scrollTgriggerAnimationInit();
 		});
 
 	}
@@ -959,6 +960,16 @@ window.popup = {
 		}
 	}
 
+	scrollTgriggerAnimationInit() {
+		let wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 7,
+		})
+
+		wow.init();
+	}
+
 
 	componentsScripts() {
 		{
@@ -972,7 +983,13 @@ window.popup = {
 
         const toggleShow = () => {
             let bottom = stickyBtn.getBoundingClientRect().bottom - document.documentElement.clientHeight;
-            if(bottom < -20) {
+            let breykpoint = -20;
+            
+            if(document.documentElement.clientWidth < 768) {
+                breykpoint = 100;
+            }
+            console.log(bottom);
+            if(bottom < -breykpoint) {
                 stickyBtn.classList.add('btn--hide');
                 wrapper.style.display = 'block';
             } else {

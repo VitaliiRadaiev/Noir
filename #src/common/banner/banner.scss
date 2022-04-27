@@ -6,6 +6,10 @@
 
     &__body {
         display: flex;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__col-1 {
@@ -21,6 +25,11 @@
         height: 100%;
         width: 100%;
 
+        @media (max-width: $md3+px) {
+            min-height: auto;
+            height: 60rem;
+        }
+
         & img {
             max-width: 100%;
             max-height: 100%;
@@ -29,15 +38,23 @@
 
     &__col-2 {
         flex: 1 1 auto;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 10rem;
+        }
     }
 
     &__text-wrap {
         max-width: 65.2rem;
         text-align: center;
+
+        @media (max-width: $md3+px) {
+            margin: 0 auto;
+        }
     }
 
     &__title {
-        font-size: 100px;
+        font-size: 10rem;
         font-weight: 300;
         line-height: 1em;
         text-transform: uppercase;
@@ -62,11 +79,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+        }
+
         & > a {
             margin-left: 3rem;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media (max-width: $md3+px) {
+                margin-left: 0;
+                margin-top: 4rem;
+            }
             & img {
                 display: inline-block;
             }

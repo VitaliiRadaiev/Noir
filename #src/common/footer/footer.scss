@@ -1,0 +1,27 @@
+.footer {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    &__boody {
+        padding-top: 1.5rem;
+        border-top: 1px solid #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+        & p {
+            margin-bottom: 0;
+            font-size: 1.7rem;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 11.4rem;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

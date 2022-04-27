@@ -7,10 +7,14 @@
     padding-top: 10rem;
     transition: all .4s ease;
 
+    @media (max-width: $md3+px) {
+        padding-top: 6rem;
+    }
+
     &__logo {
         width: 100%;
         max-width: 16.4rem;
-
+        
         & img {
             width: 100%;
             height: auto;
@@ -19,5 +23,9 @@
 
     &--is-scroll {
         padding-top: 4rem;
+
+        @media (max-width: $md3+px) {
+            padding-top: 3.5rem;
+        }
     }
 }

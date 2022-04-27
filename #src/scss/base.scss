@@ -36,8 +36,8 @@ html {
 		font-size: 8px;
 	}
 
-	@media (max-width: $md2+px) {
-
+	@media (max-width: $md3+px) {
+		font-size: 6px;
 	}
 }
 html,
@@ -69,6 +69,23 @@ body {
 		& a:not(.not-hover):hover {
 			opacity: 0.7;
 		}
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		height: 2px;
+		margin-right: 4px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #7ED321;
+		border-radius: 10px;
+
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+		border-radius: 10px;
+		box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+		margin-right: 4px;
 	}
 }
 
@@ -137,6 +154,10 @@ h2 {
 	font-size: 5.6rem;
 	font-weight: 300;
 	line-height: 1.2em;
+
+	@media (max-width: $md3+px) {
+		font-size: 4.6rem;
+	}
 }
 
 h3 {
@@ -186,9 +207,6 @@ figure {
 .padding-wrap {
 	padding: 5rem 0;
 
-	@media (max-width: $md3+px) {
-		padding: 36px 0;
-	}
 }
 
 .ibg {
@@ -207,7 +225,7 @@ figure {
 	& img {
 		width: 100%;
 		height: auto;
-		min-height: 220px;
+		min-height: 280px;
 		object-fit: cover;
 	}
 }
