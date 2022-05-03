@@ -241,6 +241,10 @@ figure {
 	}
 }
 
+.text-underline {
+	text-decoration: underline;
+}
+
 .text {
 }
 
@@ -248,6 +252,15 @@ figure {
 }
 
 .box {
+}
+
+.price-label {
+	font-size: 4.3rem;
+	line-height: 1em;
+	display: inline-flex;
+	border: 1px solid #54f018;
+	padding: 0.6rem;
+	border-radius: 0.6rem;
 }
 
 [data-padding-top-header-size] {

@@ -1,36 +1,17 @@
 .order {
+    min-width: 0;
     &__title {
         font-size: 4.2rem;
     }
 
     &__slider-price {
-        position: absolute;
-        left: 14%;
-        bottom: 20%;
-        z-index: 3;
-        font-size: 4.3rem;
-        line-height: 1em;
-        display: inline-flex;
-        border: 1px solid #54f018;
-        padding: 0.6rem;
-        border-radius: 0.6rem;
 
-        @media (max-width: $md3+px) {
-            bottom: 9.7rem;
-            left: 40%;
-        }
-
-        @media (max-width: $md4+px) {
-            left: 25%;
-            transform: translateX(-50%);
-            bottom: 11.7rem;
-        }
     }
 
     &__slider {
+        min-width: 0;
         @media (max-width: $md3+px) {
-            width: auto;
-            margin: 0 -30px;
+
         }
         & .swiper-pagination {
             line-height: 1;
@@ -40,17 +21,17 @@
             bottom: 5rem;
 
             & .swiper-pagination-bullet {
-                height: 3.8rem;
-                width: 3.8rem;
-                flex: 0 0 auto;
-                border-radius: 1rem;
-                border: 1px solid #3dfe14;
+                height: 1.1rem;
+                width: auto;
+                flex: 1 1 auto;
+                border-radius: 0;
+                border: none;
                 opacity: 1;
-                background-color: transparent;
+                background-color: #3a6730;
                 margin: 0;
 
                 &:not(:last-child) {
-                    margin-right: 1.5rem;
+                    margin-right: 1.7rem;
                 }
 
                 &.swiper-pagination-bullet-active {
@@ -93,6 +74,7 @@
         // }
 
         & img {
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
@@ -150,8 +132,9 @@
     &__slider-text {
         font-size: 1.6rem;
         line-height: 1.2em;
+
         @media (max-width: $md3+px) {
-            padding-right: 20px;
+            padding-right: 0px;
             font-size: 10px;
         }
         & ul {
@@ -166,7 +149,7 @@
     z-index: 5;
     &__items {
         margin-top: -1.7rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 6.5rem;
     }
 
     &__item {

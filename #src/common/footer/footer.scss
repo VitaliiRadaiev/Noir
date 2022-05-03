@@ -1,18 +1,55 @@
 .footer {
     padding-top: 6rem;
-    padding-bottom: 2rem;
-    &__boody {
-        padding-top: 1.5rem;
-        border-top: 1px solid #fff;
-        display: flex;
-        justify-content: space-between;
+    padding-bottom: 10rem;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $md3+px) {
+        padding-bottom: 4rem;
+    }
+    &__bg {
+        position: absolute;
+        bottom: -120px;
+        right: 0;
+        width: 1920px;
+        height: 100%;
+        z-index: 1;
+        
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
     }
 
     &__col {
+        flex: 0 1 50%;
+
+        &:first-child {
+            padding-right: 4rem;
+        }
+
         & p {
             margin-bottom: 0;
-            font-size: 1.7rem;
+            font-size: 2.4rem;
+            font-weight: 300;
+            line-height: 1.5em;
         }
+
+        & strong {
+            font-weight: 700;
+        }
+    }
+
+    &__row {
+        margin-bottom: 3rem;
     }
 
     &__logo {

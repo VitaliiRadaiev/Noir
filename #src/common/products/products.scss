@@ -67,12 +67,27 @@
         font-size: 10rem;
         font-weight: 300;
         line-height: 1em;
-        margin-bottom: 4rem;
-        padding-left: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        padding-right: 9rem;
 
         @media (max-width: $md3+px) {
             text-align: center;
-            padding-left: 0;
+            padding-right: 0;
+            padding-left: 8rem;
+
+        }
+    }
+
+    &__price {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-right: 9rem;
+
+        @media (max-width: $md3+px) {
+            padding-right: 0;
+            padding-left: 8rem;
+
         }
     }
 
