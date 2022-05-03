@@ -4,28 +4,147 @@
     left: 0;
     width: 100%;
     z-index: 47;
-    padding-top: 10rem;
-    transition: all .4s ease;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    transition: all 0.4s ease;
 
     @media (max-width: $md3+px) {
         padding-top: 6rem;
     }
 
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
     &__logo {
         width: 100%;
         max-width: 16.4rem;
-        
+        margin-right: 16.3rem;
+
+        @media (max-width: $md3+px) {
+            margin-right: 5rem;
+        }
+
         & img {
             width: 100%;
             height: auto;
         }
     }
 
+    &__language {
+        margin-right: auto;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 33.6rem;
+        margin-left: 20px;
+
+        & .btn {
+            width: 100%;
+            white-space: nowrap;
+        }
+    }
+
     &--is-scroll {
-        padding-top: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-color: #000;
 
         @media (max-width: $md3+px) {
             padding-top: 3.5rem;
+        }
+    }
+}
+
+.wpml-ls-statics-shortcode_actions {
+    position: relative;
+    font-size: 2.4rem;
+    z-index: 5;
+    width: auto !important;
+    max-width: none !important;
+    height: 100%;
+
+    & > ul {
+        padding-left: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        & .js-wpml-ls-item-toggle {
+            &::before {
+                transform: translateY(-50%) scale(1, -1);
+            }
+        }
+        & .wpml-ls-sub-menu {
+            display: block;
+        }
+    }
+
+    & .js-wpml-ls-item-toggle {
+        cursor: pointer;
+        border: none !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        line-height: 1.5em;
+        color: #fff;
+        position: relative;
+        padding-right: 3rem !important;
+        text-transform: uppercase;
+
+        &:before {
+            position: absolute;
+            content: "";
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMyIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDMzIDI2Ij48Zz48Zz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1taXRlcmxpbWl0PSIyMCIgZD0iTTEwLjI2IDEwLjI3djBsNi4yNDcgNS40MjR2MGw2LjA1Ni01LjQyNHYwIi8+PC9nPjwvZz48L3N2Zz4=");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 3rem;
+            height: 2.8rem;
+            display: inline-block;
+            top: 57%;
+            right: 0;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
+
+        &::after {
+            display: none !important;
+        }
+    }
+
+    & .wpml-ls-sub-menu {
+        visibility: visible !important;
+        position: absolute;
+        top: 100%;
+        left: 36%;
+        right: auto;
+        transform: translateX(-50%);
+        min-width: 100%;
+        background-color: #7ED321;
+        box-shadow: 0px 0px 3.5rem #2EFF00 !important;
+        padding: 1.6rem;
+        display: none;
+        animation: k-language 0.3s ease forwards;
+        border: none;
+        border-radius: 0.8rem;
+
+        & a {
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            white-space: nowrap;
+            color: #fff;
+            opacity: 1 !important;
+
+            &:hover {
+                color: #fff !important;
+            }
         }
     }
 }

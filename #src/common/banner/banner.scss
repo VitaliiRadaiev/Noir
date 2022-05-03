@@ -1,27 +1,29 @@
 .banner {
     &__inner {
-        background-color: #567758;
         padding: 13rem 0 16rem;
     }
 
     &__body {
         display: flex;
-
         @media (max-width: $md3+px) {
-            flex-direction: column-reverse;
+            display: block;
         }
     }
 
     &__col-1 {
-        flex: 0 0 39.4%;
+        flex: 0 0 28.25%;
         padding: 0 2rem;
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
     }
 
     &__img {
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 76.2rem;
+        min-height: 78.6rem;
         height: 100%;
         width: 100%;
 
@@ -38,9 +40,26 @@
 
     &__col-2 {
         flex: 1 1 auto;
-
+        @media (min-width: 768px) {
+            padding-top: 6rem;
+        }
         @media (max-width: $md3+px) {
             margin-bottom: 10rem;
+        }
+    }
+
+    &__col-3 {
+        flex: 0 0 28.25%;
+        transform: translateX(2rem);
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }   
+
+    &__mob {
+        @media (min-width: 768px) {
+            display: none;
         }
     }
 
@@ -65,7 +84,7 @@
         font-size: 5.6rem;
         font-weight: 300;
         line-height: 1.2em;
-        margin-bottom: 5rem;
+        margin-bottom: 4.5rem;
     }
 
     &__text {
@@ -77,6 +96,7 @@
 
     &__bottom {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
 
@@ -85,14 +105,13 @@
         }
 
         & > a {
-            margin-left: 3rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 2rem;
 
             @media (max-width: $md3+px) {
                 margin-left: 0;
-                margin-top: 4rem;
             }
             & img {
                 display: inline-block;

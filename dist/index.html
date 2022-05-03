@@ -71,15 +71,41 @@ defer
 	<!-- == TOP LINE ================== -->
 
 	<header class="header " data-header data-popup="add-right-padding">
-    <div class="container">
+    <div class="container header__body">
         <div class="header__logo">
             <a href="index.html">
                 <img src="img/logo/logo.svg" alt="">
             </a>
         </div>
+        <div class="header__language">
+            <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown js-wpml-ls-legacy-dropdown">
+                <ul>
+                    <li tabindex="0"
+                        class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-uk wpml-ls-current-language wpml-ls-last-item wpml-ls-item-legacy-dropdown">
+                        <a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
+                            <span class="wpml-ls-native">Ukr</span>
+                        </a>
+                        <ul class="wpml-ls-sub-menu">
+                            <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru wpml-ls-first-item">
+                                <a href="#" class="wpml-ls-link">
+                                    <span class="wpml-ls-native" lang="ru">Ru</span>
+                                </a>
+                            </li>
+                            <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru wpml-ls-first-item">
+                                <a href="#" class="wpml-ls-link">
+                                    <span class="wpml-ls-native" lang="ru">En</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__btn">
+            <a href="#order" class="btn not-hover" data-popup="open-popup">Pre-order</a>
+        </div>
     </div>
 </header>
-
 	<!-- == // TOP LINE ================== -->
 
 	<main class="_page home-page">
@@ -101,9 +127,6 @@ defer
             Зробити заради Вас
             щось насправді яскраве
         </h2>
-        <div class="intro-text__btn">
-            <a href="#order" class="btn not-hover" data-popup="open-popup" data-sticky-btn>Pre-order</a>
-        </div>
         <div class="intro-text__text text-content wow fadeInUp" data-wow-duration="2s" >
             <p>
                 Ми довго шукали рішення, яке буде справжнім втіленням сучасності, якості та зручності.
@@ -125,7 +148,7 @@ defer
             <li>
                 <div class="product-card">
                     <div class="product-card__img">
-                        <img src="img/photo/products-list-img.png" alt="">
+                        <img src="img/photo/products-list-img-1.jpg" alt="">
                     </div>
                     <div class="product-card__body">
                         <div class="product-card__title wow fadeInUp" data-wow-duration="2s">eONE</div>
@@ -144,7 +167,7 @@ defer
             <li>
                 <div class="product-card">
                     <div class="product-card__img">
-                        <img src="img/photo/products-list-img.png" alt="">
+                        <img src="img/photo/products-list-img-2.jpg" alt="">
                     </div>
                     <div class="product-card__body">
                         <div class="product-card__title wow fadeInUp" data-wow-duration="2s">iONE</div>
@@ -165,7 +188,7 @@ defer
             <li>
                 <div class="product-card">
                     <div class="product-card__img">
-                        <img src="img/photo/products-list-img.png" alt="">
+                        <img src="img/photo/products-list-img-3.jpg" alt="">
                     </div>
                     <div class="product-card__body">
                         <div class="product-card__title wow fadeInUp" data-wow-duration="2s">eDUO</div>
@@ -184,7 +207,7 @@ defer
             <li>
                 <div class="product-card">
                     <div class="product-card__img">
-                        <img src="img/photo/products-list-img.png" alt="">
+                        <img src="img/photo/products-list-img-4.jpg" alt="">
                     </div>
                     <div class="product-card__body">
                         <div class="product-card__title wow fadeInUp" data-wow-duration="2s">iDUO</div>
@@ -212,12 +235,11 @@ defer
             <div class="banner__body">
                 <div class="banner__col-1">
                     <div class="banner__img wow fadeInLeft" data-wow-duration="2s">
-                        <img src="img/photo/banner-img.png" alt="">
+                        <img src="img/photo/banner-img-1.png" alt="">
                     </div>
                 </div>
                 <div class="banner__col-2">
                     <div class="banner__text-wrap">
-                        <div class="banner__title wow fadeInUp" data-wow-duration="2s">NOIR PRO</div>
                         <div class="banner__subtitle wow fadeInUp" data-wow-duration="2s">Робіть це як Профі</div>
                         <div class="banner__text wow fadeInUp" data-wow-duration="2s">
                             <p>
@@ -226,9 +248,19 @@ defer
                                 дохід від її експлуатації
                             </p>
                         </div>
-                        <div class="banner__bottom">
+                        <div class="banner__bottom wow fadeInUp" data-wow-duration="2s">
                             Ми рекомендуємо  <a href="#"><img src="img/photo/partner-logo.svg" alt=""></a>
                         </div>
+                    </div>
+                </div>
+                <div class="banner__col-3">
+                    <div class="banner__img wow fadeInRight" data-wow-duration="2s">
+                        <img src="img/photo/banner-img-2.png" alt="">
+                    </div>
+                </div>
+                <div class="banner__mob">
+                    <div class="banner__img wow fadeInUp" data-wow-duration="2s">
+                        <img src="img/photo/banner-img-mob.png" alt="">
                     </div>
                 </div>
             </div>
@@ -313,10 +345,13 @@ defer
                         <div class="swiper-wrapper">
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/order-img.png" alt="">
+                                    <img src="img/photo/order-img-1.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">eONE</div>
+                                    <div class="order__slider-price">
+                                        $399
+                                    </div>
                                     <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 317*105 см</li>
@@ -330,10 +365,13 @@ defer
                             </div>
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/order-img.png" alt="">
+                                    <img src="img/photo/order-img-2.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">iONE</div>
+                                    <div class="order__slider-price">
+                                        $399
+                                    </div>
                                     <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 317*105 см</li>
@@ -349,10 +387,13 @@ defer
                             </div>
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/order-img.png" alt="">
+                                    <img src="img/photo/order-img-3.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">eDUO</div>
+                                    <div class="order__slider-price">
+                                        $399
+                                    </div>
                                     <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 450*105 см</li>
@@ -368,10 +409,13 @@ defer
                             </div>
                             <div class="swiper-slide order__slider-item">
                                 <div class="order__slider-img">
-                                    <img src="img/photo/order-img.png" alt="">
+                                    <img src="img/photo/order-img-3.png" alt="">
                                 </div>
                                 <div class="order__slider-body">
                                     <div class="order__slider-title">iDUO</div>
+                                    <div class="order__slider-price">
+                                        $399
+                                    </div>
                                     <div class="order__slider-text text-content">
                                         <ul>
                                             <li>розмір 317*105 см</li>

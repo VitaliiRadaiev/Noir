@@ -670,7 +670,7 @@ window.popup = {
 	initSmoothScroll() {
 		let anchors = document.querySelectorAll('a[href^="#"]:not([data-popup="open-popup"])');
 		if (anchors.length) {
-			//let header = document.querySelector('.header');
+			let header = document.querySelector('.header');
 
 			anchors.forEach(anchor => {
 				if (!anchor.getAttribute('href').match(/#\w+$/gi)) return;
@@ -684,9 +684,9 @@ window.popup = {
 						e.preventDefault();
 						let top = Math.abs(document.body.getBoundingClientRect().top) + el.getBoundingClientRect().top;
 
-						// if (header) {
-						// 	top = top - header.clientHeight;
-						// }
+						if (header) {
+							top = top - header.clientHeight;
+						}
 
 						window.scrollTo({
 							top: top,
