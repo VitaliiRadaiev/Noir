@@ -17,17 +17,19 @@ class App {
 		}
 
 		this.dynamicAdapt.init();
+		this.videoAdapt();
 		this.headerHandler();
 		this.componentsScripts();
 		this.popupHandler();
 		this.initSmoothScroll();
 		this.inputMaskInit();
 
+
 		window.addEventListener('load', () => {
 			document.body.classList.add('page-is-load');
 			this.utils.setFullScreenHeight();
 			this.slidersInit();
-			
+
 			this.scrollTgriggerAnimationInit();
 		});
 
@@ -62,7 +64,7 @@ class App {
 				if (triggerItems.length && contentItems.length) {
 					// init
 					let activeItem = tabsContainer.querySelector('.tab-active[data-tab-trigger]');
-					if(activeItem) {
+					if (activeItem) {
 						activeItem.classList.add('tab-active');
 						getContentItem(activeItem.dataset.tabTrigger).classList.add('tab-active');
 					} else {
@@ -93,12 +95,12 @@ class App {
 					})
 				}
 
-				if(select) {
+				if (select) {
 					select.addEventListener('change', (e) => {
 						getContentItem(e.target.value).classList.add('tab-active');
 
 						contentItems.forEach(item => {
-							if(getContentItem(e.target.value) === item) return;
+							if (getContentItem(e.target.value) === item) return;
 
 							item.classList.remove('tab-active');
 						})
@@ -120,7 +122,7 @@ class App {
 						let content = trigger.nextElementSibling;
 
 						// init
-						if(trigger.classList.contains('active')) {
+						if (trigger.classList.contains('active')) {
 							content.style.display = 'block';
 							parent.classList.add('active');
 						}
@@ -260,6 +262,18 @@ class App {
 		@@include('../common/intro-text/intro-text.js');
 	}
 
+	videoAdapt() {
+		if (document.documentElement.clientWidth < 768) {
+			let videos = document.querySelectorAll('[data-media-mobile]');
+			if (videos.length) {
+				videos.forEach(video => {
+					let url = video.dataset.mediaMobile;
+					video.setAttribute('src', url);
+					video.load();
+				})
+			}
+		}
+	}
 }
 
 window.addEventListener('DOMContentLoaded', function () {

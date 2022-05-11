@@ -5491,6 +5491,7 @@ figure {
   white-space: nowrap;
   color: #fff;
   opacity: 1 !important;
+  text-transform: uppercase;
 }
 
 .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:hover {
@@ -5961,22 +5962,29 @@ figure {
 
 .order__slider-item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0 !important;
+}
+
+.order__slider-item.swiper-slide-active {
+  opacity: 1 !important;
 }
 
 .order__slider-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .order__slider-img img {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: -10%;
+  left: -10%;
+  width: 125%;
   height: auto;
   z-index: 1;
   -o-object-fit: cover;
@@ -5985,13 +5993,27 @@ figure {
      object-position: 0 0;
 }
 
+.order__slider-img:before {
+  position: absolute;
+  content: "";
+  top: -10%;
+  left: -10%;
+  width: 125%;
+  height: 0;
+  padding-bottom: 125%;
+  -webkit-box-shadow: inset 0 0 50px 30px black;
+          box-shadow: inset 0 0 50px 30px black;
+  z-index: 2;
+}
+
 .order__slider-body {
-  position: relative;
   z-index: 2;
   min-height: 52.5rem;
-  padding-left: 55rem;
   padding-bottom: 12.5rem;
   padding-top: 2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .order__slider-title {
@@ -6641,12 +6663,13 @@ figure {
     margin: 50px 0;
   }
 
-  .header {
-    padding-top: 6rem;
-  }
-
   .header__logo {
     margin-right: 5rem;
+    max-width: 10rem;
+  }
+
+  .header__btn {
+    max-width: 22rem;
   }
 
   .header--is-scroll {
@@ -6661,6 +6684,11 @@ figure {
     display: none;
   }
 
+  .btn {
+    font-size: 2.6rem;
+    min-height: 6rem;
+  }
+
   .popup__body {
     padding-top: 10rem;
   }
@@ -6669,16 +6697,14 @@ figure {
     padding: 50px 20px 34px;
   }
 
-  .order__slider-body {
-    padding-left: 60rem;
-    padding-left: 55%;
-  }
-
   .order__slider-title {
     font-size: 36px;
     position: absolute;
-    left: 10%;
-    bottom: 7.5rem;
+    left: 25%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 10.5rem;
   }
 
   .order__slider-text {

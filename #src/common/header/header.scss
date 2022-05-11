@@ -8,9 +8,6 @@
     padding-bottom: 5rem;
     transition: all 0.4s ease;
 
-    @media (max-width: $md3+px) {
-        padding-top: 6rem;
-    }
 
     &__body {
         display: flex;
@@ -24,6 +21,7 @@
 
         @media (max-width: $md3+px) {
             margin-right: 5rem;
+            max-width: 10rem;
         }
 
         & img {
@@ -40,6 +38,10 @@
         width: 100%;
         max-width: 33.6rem;
         margin-left: 20px;
+
+        @media (max-width: $md3+px) {
+            max-width: 22rem;
+        }
 
         & .btn {
             width: 100%;
@@ -141,6 +143,7 @@
             white-space: nowrap;
             color: #fff;
             opacity: 1 !important;
+            text-transform: uppercase;
 
             &:hover {
                 color: #fff !important;
