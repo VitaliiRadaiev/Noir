@@ -6038,8 +6038,30 @@ figure {
   margin-bottom: 6.5rem;
 }
 
+.order-form__item {
+  position: relative;
+}
+
 .order-form__item:not(:last-child) {
   margin-bottom: 3.5rem;
+}
+
+.order-form__item .wpcf7-form-control-wrap {
+  position: static;
+}
+
+.order-form__item .wpcf7-not-valid-tip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  font-size: 1.1rem;
+  line-height: 1em;
+  color: #ff0000;
+}
+
+.order-form__item .wpcf7-not-valid-tip:before {
+  content: "*";
 }
 
 .order-form__label {
@@ -6057,6 +6079,7 @@ figure {
 
 .order-form__label span {
   color: #ff0000;
+  display: none;
 }
 
 .order-form__checkbox {

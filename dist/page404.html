@@ -29,33 +29,51 @@
 			width: 100%;
 			height: 100%;
 			z-index: 999;
-			transition: all .6s ease .2s;
+			transition: all 1s ease .2s;
 		}
 
-		._preload-body:before {
+		.loader {
+			display: block;
 			position: absolute;
 			content: '';
 			z-index: 999;
 			top: 50%;
 			left: 50%;
-			height: 50px;
-			width: 50px;
-			border-radius: 50%;
-			border: 4px solid #fff;
-			border-right: 4px solid #000;
+			height: auto;
+			width: 150px;
 			transform: translate(-50%, -50%);
-			animation: preloadBody 2s linear infinite;
+			border-radius: 50%;
+			/* animation: loaderShadowAnim 8s linear infinite; */
 		}
 
-		@keyframes preloadBody {
-			from {
-				transform: translate(-50%, -50%) rotate(0);
-			}
-
-			to {
-				transform: translate(-50%, -50%) rotate(360deg);
-			}
+		.loader__left {
+			animation: loaderAnim 8s ease infinite;
 		}
+		.loader__right {
+			animation: loaderAnim 8s ease infinite 0.4s;
+		}
+
+		@keyframes loaderAnim {
+			0% {opacity: 0; fill: #4BAB27;}
+			16.666% {opacity: 1; fill: #4BAB27;}
+			33.32% {opacity: 0; fill: #4BAB27;}
+			49.98% {opacity: 1; fill: #4662AB;}
+			66.64% {opacity: 0; fill: #4662AB;}
+			83.30% {opacity: 1; fill: #4BAB27;}
+			100% {opacity: 0; fill: #4BAB27;}
+		}
+
+		@keyframes loaderShadowAnim {
+			0% {box-shadow: 0 0 11px #4BAB27;}
+			16.666% {box-shadow: 0 0 7px #4BAB27;}
+			33.32% {box-shadow: 0 0 11px #4BAB27;}
+			49.98% {box-shadow: 0 0 7px #4662AB;}
+			66.64% {box-shadow: 0 0 11px #4662AB;}
+			83.30% {box-shadow: 0 0 7px #4BAB27;}
+			100% {box-shadow: 0 0 11px #4BAB27;}
+		}
+
+		/* #4662AB - blue  , #4BAB27 - green */
 	</style>
 	
 <script src="js/vendors.js"></script>

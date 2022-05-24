@@ -154,8 +154,28 @@
     }
 
     &__item {
+        position: relative;
+
         &:not(:last-child) {
             margin-bottom: 3.5rem;
+        }
+
+        & .wpcf7-form-control-wrap {
+            position: static;
+        }
+
+        & .wpcf7-not-valid-tip {
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
+            font-size: 1.1rem;
+            line-height: 1em;
+            color: #ff0000;
+
+            &:before {
+                content: '*';
+            }
         }
     }
 
@@ -172,6 +192,7 @@
         }
         & span {
             color: #ff0000;
+            display: none;
         }
     }
 
