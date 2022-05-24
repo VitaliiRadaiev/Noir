@@ -28,7 +28,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			z-index: 999;
+			z-index: 100;
 			transition: all 1s ease .2s;
 		}
 
@@ -49,28 +49,117 @@
 		.loader__left {
 			animation: loaderAnim 8s ease infinite;
 		}
+
 		.loader__right {
 			animation: loaderAnim 8s ease infinite 0.4s;
 		}
 
 		@keyframes loaderAnim {
-			0% {opacity: 0; fill: #4BAB27;}
-			16.666% {opacity: 1; fill: #4BAB27;}
-			33.32% {opacity: 0; fill: #4BAB27;}
-			49.98% {opacity: 1; fill: #4662AB;}
-			66.64% {opacity: 0; fill: #4662AB;}
-			83.30% {opacity: 1; fill: #4BAB27;}
-			100% {opacity: 0; fill: #4BAB27;}
+			0% {
+				opacity: 0;
+				fill: #4BAB27;
+			}
+
+			16.666% {
+				opacity: 1;
+				fill: #4BAB27;
+			}
+
+			33.32% {
+				opacity: 0;
+				fill: #4BAB27;
+			}
+
+			49.98% {
+				opacity: 1;
+				fill: #4662AB;
+			}
+
+			66.64% {
+				opacity: 0;
+				fill: #4662AB;
+			}
+
+			83.30% {
+				opacity: 1;
+				fill: #4BAB27;
+			}
+
+			100% {
+				opacity: 0;
+				fill: #4BAB27;
+			}
 		}
 
 		@keyframes loaderShadowAnim {
-			0% {box-shadow: 0 0 11px #4BAB27;}
-			16.666% {box-shadow: 0 0 7px #4BAB27;}
-			33.32% {box-shadow: 0 0 11px #4BAB27;}
-			49.98% {box-shadow: 0 0 7px #4662AB;}
-			66.64% {box-shadow: 0 0 11px #4662AB;}
-			83.30% {box-shadow: 0 0 7px #4BAB27;}
-			100% {box-shadow: 0 0 11px #4BAB27;}
+			0% {
+				box-shadow: 0 0 11px #4BAB27;
+			}
+
+			16.666% {
+				box-shadow: 0 0 7px #4BAB27;
+			}
+
+			33.32% {
+				box-shadow: 0 0 11px #4BAB27;
+			}
+
+			49.98% {
+				box-shadow: 0 0 7px #4662AB;
+			}
+
+			66.64% {
+				box-shadow: 0 0 11px #4662AB;
+			}
+
+			83.30% {
+				box-shadow: 0 0 7px #4BAB27;
+			}
+
+			100% {
+				box-shadow: 0 0 11px #4BAB27;
+			}
+		}
+
+		.logo {
+			position: absolute;
+			top: 5rem;
+			left: 0;
+			width: 100%;
+			z-index: 3;
+		}
+
+		.logo svg {
+    		width: 16.4rem;
+			height: auto;
+		}
+
+		.logo-container {
+			width: calc(100% - 200px);
+			max-width: 134.5rem !important;
+			margin: 0 auto;
+		}
+
+		@media (max-width: 1267.98px) {
+			.logo-container {
+				width: calc(100% - 100px);
+			}
+		}
+
+		@media (max-width: 991.98px) {
+			.logo-container {
+				width: calc(100% - 64px);
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			.logo-container {
+				width: calc(100% - 40px);
+			}
+
+			.logo svg {
+				width: 10rem;
+			}
 		}
 
 		/* #4662AB - blue  , #4BAB27 - green */
