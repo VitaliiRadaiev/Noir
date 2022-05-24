@@ -121,46 +121,15 @@
 
 		.logo {
 			position: absolute;
-			top: 5rem;
-			left: 0;
-			width: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			width: 100px;
+			height: auto;
 			z-index: 3;
 		}
 
-		.logo svg {
-    		width: 16.4rem;
-			height: auto;
-		}
-
-		.logo-container {
-			width: calc(100% - 200px);
-			max-width: 134.5rem !important;
-			margin: 0 auto;
-		}
-
-		@media (max-width: 1267.98px) {
-			.logo-container {
-				width: calc(100% - 100px);
-			}
-		}
-
-		@media (max-width: 991.98px) {
-			.logo-container {
-				width: calc(100% - 64px);
-			}
-		}
-
-		@media (max-width: 767.98px) {
-			.logo-container {
-				width: calc(100% - 40px);
-			}
-
-			.logo svg {
-				width: 10rem;
-			}
-		}
-
-		/* #4662AB - blue  , #4BAB27 - green */
 	</style>
 	@@include('_js.html',{})
 </head>
