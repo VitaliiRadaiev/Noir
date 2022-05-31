@@ -5792,6 +5792,11 @@ figure {
       align-self: center;
 }
 
+.mobile .input:focus,
+.mobile textarea:focus {
+  font-size: 16px;
+}
+
 .input {
   display: -webkit-box;
   display: -ms-flexbox;

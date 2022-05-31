@@ -70,6 +70,13 @@
     }
 }
 
+.mobile {
+    & .input, & textarea {
+        &:focus {
+            font-size: 16px;
+        }
+    }
+}
 .input {
     display: flex;
     align-items: center;
